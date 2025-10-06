@@ -4,7 +4,7 @@ close all; clear all;
 disp('This program computes the area under the curve of a function y = e^(dt)*sin(ct) using a chosen numerical method.');
 
 % user's desired method
-M = input("Choose an option: \n'1' - for Trapezoidal Rule\n'2' - for Simpson's Rule\n\nWhat is your choice? 1");
+M = input("Choose an option: \n'1' - for Trapezoidal Rule\n'2' - for Simpson's Rule\n\nWhat is your choice?: ");
 if M == 1
    disp('Trapezoidal Rule chosen');
 elseif M == 2
@@ -30,6 +30,7 @@ t(zc); %t-values of the zero crossing points of y
 fprintf('Zero crossings at t = ');  
 fprintf('%.4f ', t(zc));            
 fprintf('\n');       
+
 
 
 
