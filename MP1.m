@@ -164,7 +164,6 @@ plot(t(zc), y(zc), 'ro', 'MarkerFaceColor','r');
 
 %shaded areas
 shade = [1, zc, length(t)];
-area(t(i), y(i), 'FaceAlpha', 0.3);
 for k = 1:length(shade)-1
     i = shade(k):shade(k+1);
     area(t(i), y(i), 'FaceAlpha', 0.3);
@@ -173,6 +172,3 @@ end
 xlabel('x');
 ylabel('e^(dt)*sin(ct)');
 title('Area Under the Curve of y = e^{dt} * sin(ct)');
-
-
-
