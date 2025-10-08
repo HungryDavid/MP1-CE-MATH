@@ -159,17 +159,20 @@ figure;
 % t and y are the x and y axis
 % b for blue and - solid line and 2 for thickness 
 plot(t, y, 'b-', 'LineWidth', 2); hold on; grid on;
-
 % mark zero crossing
 plot(t(zc), y(zc), 'ro', 'MarkerFaceColor','r');
 
 %shaded areas
-shade = [1,zc,length(t)];
+shade = [1, zc, length(t)];
+area(t(i), y(i), 'FaceAlpha', 0.3);
 for k = 1:length(shade)-1
-    idx = shade(k):shade(k+1);
-    area(t(idx), y(idx), 'FaceAlpha', 0.3);
+    i = shade(k):shade(k+1);
+    area(t(i), y(i), 'FaceAlpha', 0.3);
 end
 
 xlabel('x');
 ylabel('e^(dt)*sin(ct)');
 title('Area Under the Curve of y = e^{dt} * sin(ct)');
+
+
+
